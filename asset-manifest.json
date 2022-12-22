@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hilbertspaze.github.io/portfolio/static/css/main.ababef68.css",
-    "main.js": "/hilbertspaze.github.io/portfolio/static/js/main.179d74aa.js",
+    "main.js": "/hilbertspaze.github.io/portfolio/static/js/main.667de8a7.js",
     "static/js/787.1f11dfe9.chunk.js": "/hilbertspaze.github.io/portfolio/static/js/787.1f11dfe9.chunk.js",
     "static/media/network.gif": "/hilbertspaze.github.io/portfolio/static/media/network.928c4d4338179a491b27.gif",
     "static/media/fmask.png": "/hilbertspaze.github.io/portfolio/static/media/fmask.028d6ed20b121dfb2231.png",
@@ -12,11 +12,11 @@
     "static/media/plot.png": "/hilbertspaze.github.io/portfolio/static/media/plot.b5bf85dafa728aa42d00.png",
     "index.html": "/hilbertspaze.github.io/portfolio/index.html",
     "main.ababef68.css.map": "/hilbertspaze.github.io/portfolio/static/css/main.ababef68.css.map",
-    "main.179d74aa.js.map": "/hilbertspaze.github.io/portfolio/static/js/main.179d74aa.js.map",
+    "main.667de8a7.js.map": "/hilbertspaze.github.io/portfolio/static/js/main.667de8a7.js.map",
     "787.1f11dfe9.chunk.js.map": "/hilbertspaze.github.io/portfolio/static/js/787.1f11dfe9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ababef68.css",
-    "static/js/main.179d74aa.js"
+    "static/js/main.667de8a7.js"
   ]
 }
