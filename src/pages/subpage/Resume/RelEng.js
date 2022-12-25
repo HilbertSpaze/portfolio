@@ -10,9 +10,9 @@ export default function Consultant() {
       affiliation = ''
       duration = '2021-present'
       description = {
-        ['Built various ML solutions to predict', 
-        'Developed proof of concept.', 
-        'Recommendations to advance the digital transformation of the company to move from descriptive to prescriptive.']
+        ['Reliability Testing of Semiconductor devices', 
+        'Statistical analysis to determine product reliability..', 
+        'Design of experiments.']
       }/>
     </div>
     </>
