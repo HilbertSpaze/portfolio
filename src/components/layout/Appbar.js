@@ -1,33 +1,47 @@
-import React, { useContext } from "react";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
+import MenuIcon from "@mui/icons-material/Menu";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
 import {
+  AppBar,
+  Box,
   Drawer,
   Divider,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
+  Toolbar,
+  IconButton,
+  Typography,
+  Container,
+  Button,
 } from "@mui/material";
 import NavContext from "../../context/NavContext";
 
 const pages = ["Home", "About", "Contact"];
 
 export default function ResponsiveAppBar(props) {
-  const { navColor, setNavColor } = useContext(NavContext);
-  const colorMap = {
-    Home: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
-    About: "transparent",
-    Contact: "transparent",
-  };
+  const {
+    navColor,
+    setNavColor,
+    fontColor,
+    setFontColor,
+    logoColor,
+    setLogoColor,
+    location,
+    colorConfig,
+  } = useContext(NavContext);
+
+  useEffect(() => {
+    setNavColor(colorConfig[location].nav);
+    setFontColor(colorConfig[location].font);
+    setLogoColor(colorConfig[location].logo);
+  }, [location, colorConfig, setNavColor, setFontColor, setLogoColor]);
+
   const navigate = useNavigate();
   const { window } = props;
   const container =
@@ -41,30 +55,61 @@ export default function ResponsiveAppBar(props) {
   const StyledButton = styled(Button)`
     padding: 6px 12px;
     &:hover {
-      color: #BEED76;
+      color: ${logoColor};
     }
-    // &:focus {
-    //   background-color: green;
-    // }
+  `;
+
+  const StyledListItem = styled(ListItem)`
+
+ "&$selected:hover": {
+    backgroundColor: "purple",
+    color: "white",
+    "& .MuiListItemIcon-root": {
+      color: "white"
+    }
+  },
+  "&:hover": {
+    backgroundColor: "blue",
+    color: "white",
+    "& .MuiListItemIcon-root": {
+      color: "white"
+    }
+  }
 `;
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Divider />
       <List>
-        {pages.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton
-              sx={{ textAlign: "center" }}
-              onClick={() => {
-                navigate(`/${item}`);
-                setNavColor(colorMap[item]);
-              }}
-            >
-              <ListItemText primary={item} primaryTypographyProps={{fontSize: '35px', color:'white'}}/>
-            </ListItemButton>
-          </ListItem>
-        ))}
+        {pages.map((item) => {
+          return item.valueOf() === "Contact" ? (
+            <StyledListItem key={item} disablePadding>
+              <ListItemButton
+                sx={{ textAlign: "center" }}
+                href="mailto:hslazatinjr@gmail.com"
+              >
+                <ListItemText
+                  primary={item}
+                  primaryTypographyProps={{ fontSize: "35px", color: "white" }}
+                />
+              </ListItemButton>
+            </StyledListItem>
+          ) : (
+            <StyledListItem key={item} disablePadding>
+              <ListItemButton
+                sx={{ textAlign: "center" }}
+                onClick={() => {
+                  navigate(`/${item}`);
+                }}
+              >
+                <ListItemText
+                  primary={item}
+                  primaryTypographyProps={{ fontSize: "35px", color: "white" }}
+                />
+              </ListItemButton>
+            </StyledListItem>
+          );
+        })}
       </List>
     </Box>
   );
@@ -86,7 +131,7 @@ export default function ResponsiveAppBar(props) {
               onClick={handleDrawerToggle}
               color="inherit"
             >
-              <MenuIcon />
+              <MenuIcon style={{ color: `${fontColor}` }} />
             </IconButton>
           </Box>
           <Box component="nav">
@@ -100,12 +145,18 @@ export default function ResponsiveAppBar(props) {
                 keepMounted: true, // Better open performance on mobile.
               }}
               sx={{
-                display: { xs: "block", sm: "block", md:"block", lg:"block", xl:"block" },
+                display: {
+                  xs: "block",
+                  sm: "block",
+                  md: "block",
+                  lg: "block",
+                  xl: "block",
+                },
                 "& .MuiDrawer-paper": {
                   boxSizing: "border-box",
                   width: "100%",
-                  height: "100%",
-                  background:'linear-gradient(to right, #0f2027, #203a43, #2c5364)',
+                  background: "transparent",
+                  backdropFilter: "blur(30px)",
                 },
               }}
             >
@@ -114,23 +165,64 @@ export default function ResponsiveAppBar(props) {
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <StyledButton
-                key={page}
-                onClick={() => {
-                  navigate(`/${page}`);
-                  setNavColor(colorMap[page]);
-                }}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </StyledButton>
-            ))}
+            {pages.map((page) => {
+              return page.valueOf() === "Contact" ? (
+                <StyledButton
+                  key={page}
+                  href="mailto:hslazatinjr@gmail.com"
+                  sx={{
+                    my: 2,
+                    display: "block",
+                    color: `${fontColor}`,
+                    fontWeight: "bold",
+                  }}
+                >
+                  {page}
+                </StyledButton>
+              ) : (
+                <StyledButton
+                  key={page}
+                  onClick={() => {
+                    navigate(`/${page}`);
+                  }}
+                  sx={{
+                    my: 2,
+                    display: "block",
+                    color: `${fontColor}`,
+                    fontWeight: "bold",
+                  }}
+                >
+                  {page}
+                </StyledButton>
+              );
+            })}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Typography>HLBERT LAZATIN</Typography>
-          </Box>
+          <IconButton
+            href="https://www.linkedin.com/in/hlazatin"
+            target="_blank"
+            style={{ color: `${logoColor}` }}
+          >
+            <LinkedInIcon style={{ fontSize: 35 }} />
+          </IconButton>
+          <IconButton
+            href="https://github.com/hlazatin"
+            target="_blank"
+            style={{ color: `${logoColor}` }}
+          >
+            <GitHubIcon style={{ fontSize: 35 }} />
+          </IconButton>
+
+          <Typography
+            variant="h6"
+            style={{
+              fontWeight: "bold",
+              paddingLeft: 13,
+              color: `${fontColor}`,
+            }}
+          >
+            HILBERT LAZATIN
+          </Typography>
         </Toolbar>
       </Container>
     </AppBar>

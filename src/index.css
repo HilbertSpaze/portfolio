@@ -12,3 +12,15 @@ code {
     monospace;
 }
 
+.tagcloud {
+  font-family: 'Poppins', sans-serif;  
+  font-size: 35px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  color: #79f7d9;
+}
+.tagcloud--item:hover {
+  color: #e94152;
+}
+

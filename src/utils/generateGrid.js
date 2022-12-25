@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Box, Grow } from "@mui/material";
-import ProjectCard from "../components/cards/ProjectCards";
-import projectList from "../data/ProjectMetaData";
+import projectList from "../pages/subpage/Project/ProjectMetaData";
+import ProjectCard from "../components/cards/ProjectCards"
 
 export default function GenerateGrid(props) {
   const { tag } = props;
@@ -17,18 +17,17 @@ export default function GenerateGrid(props) {
   }, [tag]);
 
   return (
-    <Box container >
+    <Box >
       {result.length > 0 ? (
+        <Grow in={checked} timeout={1300}>
         <Grid
           container
-          spacing={{ xs: 1, sm: 2, md: 1, lg: 4 }}
-          // columns={{ xs: 1, sm: 8, md: 3, lg: 4 }}
+          spacing={{ xs: 1, sm: 2, md: 1, lg: 2, xl:2 }}
           alignItems="center"
-          sx={{}}
         >
           {result.map((item, index) => (
-            <Grow in={checked} timeout={1300}>
-              <Grid item xs={12} sm={12} md={6} lg={3} xl={3} key={index} >
+            
+              <Grid item xs={12} sm={12} md={6} lg={4} xl={3} key={index} >
                 <ProjectCard
                   title={item.title}
                   tag={item.tag}
@@ -37,9 +36,10 @@ export default function GenerateGrid(props) {
                   technologies={item.technologies}
                 />
               </Grid>
-            </Grow>
+           
           ))}
         </Grid>
+        </Grow>
       ) : (
         ""
       )}
