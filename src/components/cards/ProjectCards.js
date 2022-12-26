@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import { useNavigate } from "react-router";
 
 import {
   Card,
@@ -11,7 +12,8 @@ import {
 } from "@mui/material";
 
 export default function ProjectCard(props) {
-  const { title, img, desc, technologies } = props;
+  const { title, img, desc, technologies, path } = props;
+  const navigate = useNavigate();
   const useStyles = styled({
     root: {
       transition: "transform 0.15s ease-in-out",
@@ -39,11 +41,7 @@ export default function ProjectCard(props) {
         "&:hover": { transform: "scale3d(1.05, 1.05, 1.1)" },
       }}
     >
-      <CardActionArea
-        onClick={() => {
-          alert("Page Under Construction");
-        }}
-      >
+      <CardActionArea onClick={()=>{navigate(path)}}>
         <CardMedia
           component="img"
           height="115"

@@ -40,7 +40,7 @@ export default function Home(props) {
         style={{
           background: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
           marginBottom:0,
-
+          
         }}
       >
        
@@ -58,7 +58,7 @@ export default function Home(props) {
               {/* <strong>full-stack</strong>{" "} */}
               <strong>DATA SCIENTIST.</strong>
             </Typography>
-            <Typography variant="h5" style={{ color: "gray" }}>
+            <Typography variant="h5" style={{ color: "gray", marginTop:10 }}>
               I  do all types of analytics from building {" "} 
               <span style={{color:'lightgray'}}>scalable</span> 
               {" "} machine learning systems,  data products, data pipelines that transforms data to {" "}

@@ -3,20 +3,20 @@ import TagCloud from "TagCloud";
 
 const TagCloudSkill = () =>  {
   const sphereMounted = useRef(false); // useRef hook: Avoids behavior where useeffect runs twice in development mode. 
-  React.useEffect(() => {
+  useEffect(() => {
         if(sphereMounted.current === false){
  // Again, define your tags  
             const myTags = [
-                'Python', 'Spark', 'React',
+                'Python', 'Spark', 'ReactJS',
                 'JavaScript', 'HTML/CSS',
                 'Django', 'Azure', 'git',
-                'AWS', 'PowerBI'
+                'AWS', 'PowerBI', 'R'
             ];
             // Render a tagCloud with custom configuration
             var tagCloud = TagCloud('.sphere', myTags,{
 
                 // radius in px
-                radius: 200,
+                radius: 250,
 
                 // animation speed
                 // slow, normal, fast

@@ -6,11 +6,13 @@ import pollute from "../../../assets/images/pollution.gif";
 import dweb from "../../../assets/images/deepweb.gif";
 
 
+
+
 const projectList = [
   {
-    title: "Determining causal effects among financial markets",
+    title: "Causal Analysis between Commmodity and US Stock Market",
     tag: "ML",
-    desc: `Dynamic causal modeling to determine if commodity prices causes stock price to change.`,
+    desc: `This study aims to uncover causality between financial markets.     `,
     cover: pollute,
     technologies: "Dynamic Causal Modelling, Causal Analysis"
   },
@@ -32,14 +34,7 @@ const projectList = [
     cover: pq,
     technologies: " GANs, pix2pix, U-NET",
   },
-  {
-    title: "Vibration Analysis",
-    tag: "DMW",
-    desc: `Predict whether a machine will fail based on vibration signature. 
-    Used Fourier transform to correlate vibration profile to a failure mode.`,
-    cover: anim,
-    technologies: "Fourier Transform, Signal Processing",
-  },
+
   {
     title: "Network of Works",
     tag: "DMW",
@@ -56,6 +51,8 @@ const projectList = [
     Performed K-Means clustering and association rule mining to create vendor profiles.`,
     cover: dweb,
     technologies: "Association Rule Mining, Clustering, Dask",
+    path: '/darkweb',
+
   },
   {
     title: "Forecasting Air Particle Pollutant Concentration",

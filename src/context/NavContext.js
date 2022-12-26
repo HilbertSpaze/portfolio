@@ -10,17 +10,18 @@ export default NavContext;
 export const NavigationProvider = ({ children }) => {
   const location = useLocation().pathname.slice(1);
   const colorConfig = {
-    '': {
+      '': {
       nav: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
       font: "white",
-      logo: "#79f7d9",
+      logo: "white",
     },
     'Home': {
       nav: "linear-gradient(to right, #0f2027, #203a43, #2c5364)",
-      font: "white",
-      logo: "#79f7d9",
+      font: "lightgray",
+      logo: "white",
     },
     'About': { nav: "linear-gradient(to right, #ece9e6, #ffffff)", font: "#203354", logo: "#00468b" },
+    'darkweb': { nav: "linear-gradient(to right, #000000, #434343)", font: "white", logo: "white" }
   };
   const [navColor, setNavColor] = useState(colorConfig[location].nav);
   const [fontColor, setFontColor] = useState(colorConfig[location].font);

@@ -34,6 +34,7 @@ export default function GenerateGrid(props) {
                   desc={item.desc}
                   img={item.cover}
                   technologies={item.technologies}
+                  path = {item.path}
                 />
               </Grid>
            
