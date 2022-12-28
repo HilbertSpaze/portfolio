@@ -19,7 +19,7 @@ export default function About() {
           background: "linear-gradient(to right, #ece9e6, #ffffff)",
         }}
       >
-        <Slide direction="right" in timeout={1000}>
+        <Slide direction="bottom" in timeout={1000}>
           <div class="container">
             <Divider>
               <Typography variant="h3" style={{ fontWeight: 'bold' }}>About Me</Typography>
@@ -46,24 +46,20 @@ export default function About() {
                 xl={8}
               >
                 <p class="lead" style={{ fontSize: 21, color: "black" }}>
-                  I am a data scientist with 2+ years of experience. Blah blah
-                  blah. My passion for anything data related has began since my days as
-                  an applied physics student.
+                  I am a data scientist with 2+ years of experience. My interest with data analytics and AI began when I wanted to 
+                  build a trading system that will help me forecast the market. (Though it appears to be a very difficult problem).
+                  I began thinking of ways I can apply it to work.
                   <br />
                   <br />
-                  I currently work as a data scientist at an aerospace company,
-                  where I'm involved in building data science solutions for
-                  operations, production, supply chain. I have extensive experience
-                  working on predictive modeling, simulations, data analysis.
+                  I have extensive experience working on predictive modeling, simulations, data analysis.
                   I also got to work on building data / ETL pipelines, web applications and dashboards
                   to fully harness the power of data.
                   I love solving problems and building cool stuff that creates value.
                   <br />
-                  <br />
-                  Outside of data science, I like to play video games,
-                  badminton, watch NBA and travel.
+                  <br />Outside of data science, I'm interested in doing: <br/><br/>
+                  <Hobbies />
                 </p>
-                <Hobbies />
+                
               </Grid>
 
             </Grid>
@@ -82,7 +78,7 @@ export default function About() {
       >
         <div class="container" >
           <Divider>
-            <Typography variant="h4" style={{ fontWeight: 'bold', color: '#bdf0e4', marginBottom: 30 }}>Experience</Typography>
+            <Typography variant="h3" style={{ fontWeight: 'bold', color: '#bdf0e4', marginBottom: 30 }}>Background</Typography>
           </Divider>
           <Experience />
         </div>

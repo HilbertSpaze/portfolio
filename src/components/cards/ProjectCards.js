@@ -50,22 +50,22 @@ export default function ProjectCard(props) {
           sx={{}}
         />
 
-        <CardContent sx={{ height: 230, paddingBottom: 30 }}>
-          <Typography variant="h5" style={{fontWeight:'bold', paddingBottom:10}}>{title}</Typography>
+        <CardContent sx={{ height: 50, paddingBottom: 30, background:'white', textAlign:'center'}}>
+          <Typography variant="h5" style={{fontWeight:'bold', color:'#203A43', paddingBottom:10}}>{title}</Typography>
             
 
           <Typography
             component='div'
             variant="subtitle1"
-            color="text.secondary"
-            sx={{ textAlign: "justify" }}
+            // color="text.secondary"
+            sx={{ textAlign: "justify", color:'#203a43' }}
           >
             {desc}
           </Typography>
         </CardContent>
 
-        <CardActions style={{ backgroundColor: "#E2EAEC" }}>
-          <Typography variant="body2">{technologies}</Typography>
+        <CardActions style={{ background: "linear-gradient(to bottom, #203a43, #2c5364)", justifyContent:'center', textAlign:'center', height:50  }}>
+          <Typography variant="h7" style={{ color:'#79f7d9'}}>{technologies}</Typography>
         </CardActions>
       </CardActionArea>
     </Card>

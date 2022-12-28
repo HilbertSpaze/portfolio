@@ -61,11 +61,11 @@ export default function Experience(props) {
           sx={{ borderRight: 1, borderColor: "divider", color:'white', fontSize:100}}
 
         >
-          <StyledTab label="Data Scientist" value="DS" />
+          <StyledTab label="Sr. Data Scientist" value="DS" />
           <StyledTab label="Data Science Consultant" value="DSC" />
-          <StyledTab label="MS Data Science" value="MS" />
+          <StyledTab label="MSc. Data Science" value="MS" />
           <StyledTab label="Reliability Engineer" value="RE" />
-          <StyledTab label="BS Applied Physics" value="BS" />
+          <StyledTab label="BSc. Applied Physics" value="BS" />
         </Tabs>
         </Grid>
         <Grid item xs={12} md={12} lg={9} xl={9}>

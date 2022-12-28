@@ -1,9 +1,9 @@
-import ns from "../../../assets/images/network.gif";
-import pq from "../../../assets/images/plot.png";
+import ns from "../../../assets/images/network.png";
+import sketch from "../../../assets/images/sketch.jfif";
 import fmask from "../../../assets/images/fmask.png";
-import anim from "../../../assets/images/vib.gif";
 import pollute from "../../../assets/images/pollution.gif";
 import dweb from "../../../assets/images/deepweb.gif";
+import nba from "../../../assets/images/nba.webp";
 
 
 
@@ -12,53 +12,74 @@ const projectList = [
   {
     title: "Causal Analysis between Commmodity and US Stock Market",
     tag: "ML",
-    desc: `This study aims to uncover causality between financial markets.     `,
+    desc: <div>This study aims to uncover granger causality between financial markets.</div>,
     cover: pollute,
-    technologies: "Dynamic Causal Modelling, Causal Analysis"
+    technologies: "Granger Causality, Time Series Analysis"
   },
   {
     
     title: "Face Mask Detection",
     tag: "ML",
-    desc: `A mobile deep learning model that identifies three classes (with mask, no mask, and incorrectly worn). \
-    Model has a 99.26% test accuracy with  about 2.3 million\
-    parameters, making it lighter than other models in literature`,
+    desc: <div>A mobile deep learning model that identifies three classes (with mask, no mask, and incorrectly worn).
+    Model has a <strong>99.26%</strong> test accuracy with  about 2.3 million
+    parameters, making it <strong>lighter</strong> than other models in literature</div>,
     cover: fmask,
     technologies: "Deep Learning, MobileNetV2, Computer Vision",
   },
   {
+    title: "Predicting who would win in an NBA match?",
+    tag: "ML",
+    desc: <div>Built an ML model that predicts who would win in an nba match up based on current stats.</div>,
+    cover: nba,
+    technologies: "Machine Learning"
+  },
+  {
+    title: "Recommending What to Watch.",
+    tag: "ML",
+    desc: <div>This study aims to predict who would win in an nba match up based on current stats.</div>,
+    cover: nba,
+    technologies: "Recommender Systems,"
+  },
+  {
     title: "Recreating Face Photos From Face Sketches",
     tag: "ML",
-    desc: `Used a conditional generative adversarial network
-    using a pix2pix architecture to train a model for sketch to photo translation.`,
-    cover: pq,
+    desc: <div>Used a <strong>conditional generative adversarial network</strong> 
+    {" "} using a <strong>pix2pix</strong> architecture to train a model for sketch to photo translation.</div>,
+    cover: sketch,
     technologies: " GANs, pix2pix, U-NET",
+  },
+  {
+    title: "Analyzing vibration data",
+    tag: "DMW",
+    desc: <div>Analyze vibration data.</div>,
+    cover: nba,
+    technologies: "Machine Learning"
   },
 
   {
     title: "Network of Works",
     tag: "DMW",
-    desc:  `Network science approach to IT Job Market Analysis. Uncovered insights such as which \
-    provide the best chance of transitioning to other high-paying jobs, \
-    gaps on job-skill requirements, and essential skills to learn`,
+    desc:  <div>Network science approach to IT Job Market Analysis. Uncovered insights such as which
+    provide the best chance of transitioning to other high-paying jobs, 
+    gaps on job-skill requirements, and essential skills to learn</div>,
     cover: ns,
     technologies: "Web scraping, Link/Graph Analysis",
   },
   {
     title: "Exploring Darknet Vendor Group Profiles",
     tag: "BD",
-    desc: `Analyzed a collection of darknet marketplace HTML pages (~50 GB).
-    Performed K-Means clustering and association rule mining to create vendor profiles.`,
+    desc: <div>Analyzed a collection of darknet marketplace HTML pages <strong>(50 GB)</strong>.
+    Performed <strong>K-Means clustering and association rule mining</strong> to create vendor profiles.</div>,
     cover: dweb,
-    technologies: "Association Rule Mining, Clustering, Dask",
+    technologies: "Association Rule Mining, Clustering, Dask, Parallel Computing",
     path: '/darkweb',
 
   },
   {
     title: "Forecasting Air Particle Pollutant Concentration",
     tag: "BD",
-    desc: `Created a spark cluster  to process and analyze PM2.5 pollutant concentration (112GB of data). \
-    Trained various ML models to predict future PM2.5 concentration.`,
+    desc: <div>Created a spark cluster  to process and analyze PM2.5 pollutant concentration <strong>(112GB of data)</strong>.
+    Trained various ML models to <strong>predict future PM2.5 concentration.</strong></div>,
     cover: pollute,
     technologies: "Cloud Computing, Spark, LSTM, Time Series"
   },

@@ -7,10 +7,11 @@ const TagCloudSkill = () =>  {
         if(sphereMounted.current === false){
  // Again, define your tags  
             const myTags = [
-                'Python', 'Spark', 'ReactJS',
-                'JavaScript', 'HTML/CSS',
+                'Python', 'Spark', 'Dask',
                 'Django', 'Azure', 'git',
-                'AWS', 'PowerBI', 'R'
+                'AWS', 'PowerBI', 'SQL',
+                'ReactJS',
+                'JavaScript', 'HTML/CSS'
             ];
             // Render a tagCloud with custom configuration
             var tagCloud = TagCloud('.sphere', myTags,{
