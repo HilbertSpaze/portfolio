@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.240889cd.css",
-    "main.js": "/portfolio/static/js/main.fa27c957.js",
-    "static/media/fmask.png": "/portfolio/static/media/fmask.028d6ed20b121dfb2231.png",
+    "main.js": "/portfolio/static/js/main.1394dd48.js",
+    "static/media/facemask.gif": "/portfolio/static/media/facemask.6a34051045c2d7fa8991.gif",
     "static/media/nba.webp": "/portfolio/static/media/nba.be0f5438b96f3fb81a1a.webp",
     "static/media/network.png": "/portfolio/static/media/network.cc4444885e0edd466f89.png",
     "static/media/paris_crop.jpg": "/portfolio/static/media/paris_crop.9595abe17952a4cd1a73.jpg",
     "static/media/deepweb.gif": "/portfolio/static/media/deepweb.7ff6aa5a84d0bcb4719b.gif",
     "static/media/pollution.gif": "/portfolio/static/media/pollution.b585ddb999de3d9f1031.gif",
+    "static/media/vib.gif": "/portfolio/static/media/vib.0897fe56d47acdd62dff.gif",
     "static/media/sketch.jfif": "/portfolio/static/media/sketch.a48d28c26da751d34be5.jfif",
     "index.html": "/portfolio/index.html",
     "main.240889cd.css.map": "/portfolio/static/css/main.240889cd.css.map",
-    "main.fa27c957.js.map": "/portfolio/static/js/main.fa27c957.js.map"
+    "main.1394dd48.js.map": "/portfolio/static/js/main.1394dd48.js.map"
   },
   "entrypoints": [
     "static/css/main.240889cd.css",
-    "static/js/main.fa27c957.js"
+    "static/js/main.1394dd48.js"
   ]
 }
