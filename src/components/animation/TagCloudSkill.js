@@ -10,19 +10,18 @@ const TagCloudSkill = () =>  {
                 'Python', 'Spark', 'Dask',
                 'Django', 'Azure', 'git',
                 'AWS', 'PowerBI', 'SQL',
-                'ReactJS',
-                'JavaScript', 'HTML/CSS'
+                'ReactJS', 'HTML/CSS',
             ];
             // Render a tagCloud with custom configuration
-            var tagCloud = TagCloud('.sphere', myTags,{
+            TagCloud('.sphere', myTags,{
 
                 // radius in px
-                radius: 250,
+                radius: 305,
 
                 // animation speed
                 // slow, normal, fast
-                maxSpeed: 'fast',
-                initSpeed: 'normal',
+                maxSpeed: 'normal',
+                initSpeed: 'slow',
 
                 // 0 = top
                 // 90 = left

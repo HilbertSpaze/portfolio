@@ -1,10 +1,11 @@
 import ns from "../../../assets/images/network.png";
-import sketch from "../../../assets/images/sketch.jfif";
-import fmask from "../../../assets/images/fmask.png";
+import sketch from "../../../assets/images/sketch_final.gif";
+import fmask from "../../../assets/images/facemask.gif";
 import pollute from "../../../assets/images/pollution.gif";
 import dweb from "../../../assets/images/deepweb.gif";
 import nba from "../../../assets/images/nba.webp";
-
+import vib from "../../../assets/images/vib.gif";
+import stocks from "../../../assets/images/stocks.gif";
 
 
 
@@ -13,32 +14,18 @@ const projectList = [
     title: "Causal Analysis between Commmodity and US Stock Market",
     tag: "ML",
     desc: <div>This study aims to uncover granger causality between financial markets.</div>,
-    cover: pollute,
+    cover: stocks,
     technologies: "Granger Causality, Time Series Analysis"
   },
   {
     
-    title: "Face Mask Detection",
+    title: "WearMaskNet: Real-Time Face Mask Detection",
     tag: "ML",
     desc: <div>A mobile deep learning model that identifies three classes (with mask, no mask, and incorrectly worn).
     Model has a <strong>99.26%</strong> test accuracy with  about 2.3 million
     parameters, making it <strong>lighter</strong> than other models in literature</div>,
     cover: fmask,
     technologies: "Deep Learning, MobileNetV2, Computer Vision",
-  },
-  {
-    title: "Predicting who would win in an NBA match?",
-    tag: "ML",
-    desc: <div>Built an ML model that predicts who would win in an nba match up based on current stats.</div>,
-    cover: nba,
-    technologies: "Machine Learning"
-  },
-  {
-    title: "Recommending What to Watch.",
-    tag: "ML",
-    desc: <div>This study aims to predict who would win in an nba match up based on current stats.</div>,
-    cover: nba,
-    technologies: "Recommender Systems,"
   },
   {
     title: "Recreating Face Photos From Face Sketches",
@@ -49,15 +36,23 @@ const projectList = [
     technologies: " GANs, pix2pix, U-NET",
   },
   {
-    title: "Analyzing vibration data",
-    tag: "DMW",
-    desc: <div>Analyze vibration data.</div>,
+    title: "Predicting who would win in an NBA match?",
+    tag: "ML",
+    desc: <div>Built an ML model that predicts who would win in an nba match up based on current stats.</div>,
     cover: nba,
-    technologies: "Machine Learning"
+    technologies: "Machine Learning, Simulations"
   },
 
   {
-    title: "Network of Works",
+    title: "Analyzing vibration data",
+    tag: "DMW",
+    desc: <div>Analyze vibration data.</div>,
+    cover: vib,
+    technologies: "Fourier Analysis, Machine Learning"
+  },
+
+  {
+    title: "Network of Works: A Network Science Approach to IT Job Market Analysis.",
     tag: "DMW",
     desc:  <div>Network science approach to IT Job Market Analysis. Uncovered insights such as which
     provide the best chance of transitioning to other high-paying jobs, 

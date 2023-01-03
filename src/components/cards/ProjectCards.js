@@ -1,24 +1,41 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 
 import {
+  Box,
   Card,
-  CardActions,
-  CardContent,
   CardActionArea,
   CardMedia,
   Typography,
+  Tooltip,
 } from "@mui/material";
 
 export default function ProjectCard(props) {
-  const { title, img, desc, technologies, path } = props;
-  const navigate = useNavigate();
+  const { title, img,  technologies, path } = props;
+  // const navigate = useNavigate();
   const useStyles = styled({
     root: {
       transition: "transform 0.15s ease-in-out",
     },
   });
+
+  const styles = {
+    media: {
+      height: 0,
+      paddingTop: "56.25%", // 16:9
+    },
+    card: {
+      position: "relative",
+    },
+    overlay: {
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      width: "100%",
+      padding: "20px",
+    },
+  };
 
   const classes = useStyles();
   const [state, setState] = useState({
@@ -27,47 +44,74 @@ export default function ProjectCard(props) {
   });
 
   return (
-    <Card
-      className={classes.root}
-      classes={{ root: state.raised ? classes.cardHovered : "" }}
-      onMouseOver={() => setState({ raised: true, shadow: 8 })}
-      onMouseOut={() => setState({ raised: false, shadow: 4 })}
-      raised={state.raised}
-      zdepth={state.shadow}
-      sx={{
-        width: "auto",
-        height: "auto",
-        margin: 0.5,
-        "&:hover": { transform: "scale3d(1.05, 1.05, 1.1)" },
+    <Tooltip
+      title="Click to view more details."
+      placement="top"
+      enterTouchDelay={0}
+      leaveTouchDelay={600}
+      PopperProps={{
+        modifiers: [
+          {
+            name: "offset",
+            options: {
+              offset: [0, -50],
+            },
+          },
+        ],
+        sx: {
+          "& .MuiTooltip-tooltip": {
+            fontSize: 13,
+          },
+        },
       }}
     >
-      <CardActionArea onClick={()=>{navigate(path)}}>
-        <CardMedia
-          component="img"
-          height="115"
-          image={img}
-          alt="green iguana"
-          sx={{}}
-        />
+      <Card
+        className={classes.root}
+        classes={{ root: state.raised ? classes.cardHovered : "" }}
+        onMouseOver={() => setState({ raised: true, shadow: 8, tooltip: true })}
+        onMouseOut={() =>
+          setState({ raised: false, shadow: 4, tooltip: false })
+        }
+        raised={state.raised}
+        zdepth={state.shadow}
+        style={styles.card}
+        sx={{
+          width: "auto",
+          height: "auto",
+          margin: 0.5,
+          borderRadius: "10px",
+          "&:hover": { transform: "scale3d(1.05, 1.05, 1.1)" },
+        }}
+      >
+        <CardActionArea
+          // onClick={() => {
+          //   navigate(path);
+          // }}
+        >
+          <CardMedia
+            component="img"
+            height="260"
+            image={img}
+            alt="green iguana"
+            style={{ filter: "brightness(60%)" }}
+          />
+          <Box style={styles.overlay}>
+            <Typography
+              variant="h5"
+              style={{ fontWeight: "bold", color: "white" }}
+            >
+              {title}
+            </Typography>
 
-        <CardContent sx={{ height: 50, paddingBottom: 30, background:'white', textAlign:'center'}}>
-          <Typography variant="h5" style={{fontWeight:'bold', color:'#203A43', paddingBottom:10}}>{title}</Typography>
-            
-
-          <Typography
-            component='div'
-            variant="subtitle1"
-            // color="text.secondary"
-            sx={{ textAlign: "justify", color:'#203a43' }}
-          >
-            {desc}
-          </Typography>
-        </CardContent>
-
-        <CardActions style={{ background: "linear-gradient(to bottom, #203a43, #2c5364)", justifyContent:'center', textAlign:'center', height:50  }}>
-          <Typography variant="h7" style={{ color:'#79f7d9'}}>{technologies}</Typography>
-        </CardActions>
-      </CardActionArea>
-    </Card>
+            <Typography
+              variant="subtitle1"
+              style={{ color: "lightgray", marginTop: 10, fontSize: 15 }}
+            >
+              {technologies}
+            </Typography>
+          </Box>
+        </CardActionArea>
+      </Card>
+    </Tooltip>
   );
 }

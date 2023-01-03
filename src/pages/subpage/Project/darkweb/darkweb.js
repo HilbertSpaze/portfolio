@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Container, Fade } from "@mui/material";
+import { Typography, Container, Paper, Fade } from "@mui/material";
 
 export default function Darkweb() {
   return (
@@ -7,17 +7,23 @@ export default function Darkweb() {
       <div
         className="jumbotron jumbotron-fluid"
         style={{
-          background: "linear-gradient(to right, #000000, #434343)",
-          marginBottom: 0,
+          // background: "linear-gradient(to right, #000000, #434343)",
         }}
       >
+        
         <div className="container">
+        <Paper elevation = {3} style={{padding:20, borderRadius:10, marginTop:20}}>
           <Fade in timeout={1000}>
             <div>
-              <Typography variant="h3" sx={{ color: "lightgray" }}>
+              <Typography variant="h3" sx={{ }}>
                 Exploring DarkNet Vendor Profiles
               </Typography>
-            <span style={{color:'white'}}>
+              <Typography variant="subtitle2" sx={{ }}>
+                December 2021.
+              </Typography>
+              <Typography variant="h6" sx={{ }}>
+                Executive Summary
+              </Typography>
               <p>
                 As people are using digital and online services more during the
                 COVID-19 lockdown, there was also an increase in illegal
@@ -41,10 +47,11 @@ export default function Darkweb() {
                 interesting, since there were already studies about their
                 relationship in prior health studies.</p>
 
-                </span>
             </div>
           </Fade>
+          </Paper>
         </div>
+        
       </div>
     </>
   );

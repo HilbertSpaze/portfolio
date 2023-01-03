@@ -17,9 +17,8 @@ export default function GenerateGrid(props) {
   }, [tag]);
 
   return (
-    <Box >
+    <Box sx={{maxHeight:'100vh', maxWidth:'100%'}} >
       {result.length > 0 ? (
-        <Grow in={checked} timeout={1300}>
         <Grid
           container
           spacing={{ xs: 1, sm: 2, md: 1, lg: 2, xl:2 }}
@@ -35,12 +34,12 @@ export default function GenerateGrid(props) {
                   img={item.cover}
                   technologies={item.technologies}
                   path = {item.path}
+                  subtitle={item.subtitle}
                 />
               </Grid>
            
           ))}
         </Grid>
-        </Grow>
       ) : (
         ""
       )}
