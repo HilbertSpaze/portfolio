@@ -13,6 +13,7 @@ import {
 
 export default function ProjectCard(props) {
   const { title, img,  technologies, path } = props;
+  const [brightness, setBrightness] = useState('30%')
   // const navigate = useNavigate();
   const useStyles = styled({
     root: {
@@ -68,9 +69,11 @@ export default function ProjectCard(props) {
       <Card
         className={classes.root}
         classes={{ root: state.raised ? classes.cardHovered : "" }}
-        onMouseOver={() => setState({ raised: true, shadow: 8, tooltip: true })}
+        onMouseOver={() => {setState({ raised: true, shadow: 8, tooltip: true });
+      setBrightness('80%')}}
         onMouseOut={() =>
-          setState({ raised: false, shadow: 4, tooltip: false })
+          {setState({ raised: false, shadow: 4, tooltip: false });
+        setBrightness('50%')}
         }
         raised={state.raised}
         zdepth={state.shadow}
@@ -79,21 +82,20 @@ export default function ProjectCard(props) {
           width: "auto",
           height: "auto",
           margin: 0.5,
-          borderRadius: "10px",
           "&:hover": { transform: "scale3d(1.05, 1.05, 1.1)" },
         }}
       >
         <CardActionArea
-          // onClick={() => {
-          //   navigate(path);
-          // }}
+          onClick={() => {
+            // navigate(path);
+          }}
         >
           <CardMedia
             component="img"
             height="260"
             image={img}
             alt="green iguana"
-            style={{ filter: "brightness(60%)" }}
+            style={{ filter: `brightness(${brightness}) ` }}
           />
           <Box style={styles.overlay}>
             <Typography

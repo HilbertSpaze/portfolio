@@ -31,24 +31,23 @@ export default function Home(props) {
 
   return (
     <React.Fragment>
-        <Box 
-        sx={{marginTop: { xs: "100%", sm: "40%", md: "0%", lg: "10%", xl: "0%" }}}>
           <Grid container alignItems="center" spacing={2}>
             <Grid item xs={12} sm={12} md={7} lg={7} xl={8}>
+              <Typography variant="h4" style={{color:'#45a29e'}}>Hi, I'm</Typography>
               <BounceText text={`Hilbert,`} />
 
               <Fade in timeout={1000}>
                 <div>
-                  <Typography variant="h2" sx={{ color: "lightgray" }}>
-                    a <strong style={{color:'white'}}>DATA SCIENTIST.</strong>
+                  <Typography variant="h2" sx={{ color: "#c5c6c7" }}>
+                    a <strong style={{color:'#56f7fc', fontSize:75, fontWeight:650}}>DATA SCIENTIST.</strong>
                   </Typography>
                   <Typography
-                    variant="h5"
-                    style={{ color: "gray", marginTop: 10 }}
+                    variant="h6"
+                    style={{ color: "#c5c6c7", fontSize:28, marginTop: 10 }}
                   >
-                    I help <span style={{ color: "white" }}>translate data into value </span> 
-                    through <span style={{ color: "white" }}>data analytics</span> and
-                    <span style={{ color: "white" }}> web development.</span>
+                    I help <span style={{ fontWeight:600, color: "white" }}>translate data into value </span> 
+                    through <span style={{ fontWeight:600, color: "white" }}>data analytics</span> and
+                    <span style={{ fontWeight:600, color: "white" }}> web development.</span>
                   </Typography>
                   <Grid spacing={{ xs: 0, sm: 2, md: 2, lg: 3, xl:3 }} container  style={{alignItems:'center'}}>
                     <Grid 
@@ -63,8 +62,8 @@ export default function Home(props) {
                       borderRadius: 40,
                       marginTop: 20,
                       // background: "linear-gradient(to top, #0cebeb, #20e3b2, #29ffc6)",
-                      color: "#0cebeb",
-                      borderColor: "#0cebeb",
+                      color: "#66FCF1",
+                      borderColor: "#66FCF1",
                       border: '5px solid'
                     }}
                   >
@@ -100,7 +99,6 @@ export default function Home(props) {
               <TagCloudSkill />
             </Grid>
           </Grid>
-        </Box>
     </React.Fragment>
   );
 }

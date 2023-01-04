@@ -12,7 +12,7 @@ export default function Highlight(props) {
   return (
     <>
     <Box>
-      <Card variant="outlined" sx={{maxWidth:'100%', background:'transparent', color:'white'}}>
+      <Card elevation={3} sx={{minWidth:'80%', maxWidth:'90%',background:'#2f3f52', color:'white'}}>
           <CardContent sx={{ textAlign: "center" }}>
             {icon}
             <Typography variant="h6" gutterBottom>

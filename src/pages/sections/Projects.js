@@ -15,20 +15,20 @@ export default function Projects() {
           color: "black",
           marginRight: theme.spacing(1),
           "&:hover": {
-            color: "#2C5364",
+            color: "#45A29E",
             opacity: 1,
           },
           "&.Mui-selected": {
-            color: "white",
-            backgroundColor: "#00ADB5",
+            color: "#1F2833",
+            backgroundColor: "#66FCF1",
           },
         })
       );
   return (
     <>
   <Box sx={{ paddingBottom: 10, maxHeight:'100vh', width:'100%'}}>
-
-    {/* <Typography style={{fontSize:27, marginBottom:30}}>Here are some projects I did, outside of my job. </Typography> */}
+    <Divider><Typography variant="h2" style={{fontWeight:'bold', fontSize:90, color:'#1F2833'}}>PROJECTS</Typography></Divider>
+    <Typography style={{fontSize:27, marginBottom:30}}>Here are some projects I did, outside of my job. </Typography>
     
       <Tabs
         value={value}
@@ -49,7 +49,7 @@ export default function Projects() {
         <StyledTab label="Big Data Analytics" value="BD" />
         <StyledTab label="Data Mining" value="DMW" />
       </Tabs>
-    <GenerateGrid tag={value}></GenerateGrid>
+        <GenerateGrid tag={value}></GenerateGrid>
   </Box>
 </>
   )

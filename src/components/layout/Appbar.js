@@ -213,7 +213,7 @@ export default function ResponsiveAppBar(props) {
             <GitHubIcon style={{ fontSize: 35 }} />
           </IconButton>
 
-          <Typography
+          {/* <Typography
             variant="h6"
             style={{
               fontWeight: "bold",
@@ -222,7 +222,7 @@ export default function ResponsiveAppBar(props) {
             }}
           >
             HILBERT LAZATIN
-          </Typography>
+          </Typography> */}
         </Toolbar>
       </Container>
     </AppBar>
