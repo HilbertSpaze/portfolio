@@ -4,7 +4,7 @@ import About from "./pages/sections/About";
 import Projects from "./pages/sections/Projects";
 import { Box, Container, Grid } from "@mui/material";
 import ResponsiveAppBar from "./components/layout/Appbar";
-import bg from "./assets/images/bg.png";
+import bg from "./assets/svgs/about.svg";
 
 export default function App() {
   return (
@@ -15,16 +15,18 @@ export default function App() {
           <Grid
             item
             xs={12}
-            style={{ background: "#0B0C10", minHeight: "102vh" }}
+            style={{ background:'#0b0c10', minHeight: "102vh" }}
           >
             <Box
               sx={{
+                // backgroundImage:`url(${bg})`,
                 paddingLeft: "20%",
                 paddingRight: "20%",
-                paddingTop: "3%",
+                paddingTop: "10%",
                 paddingBottom: "10%",
               }}
             >
+              <Box sx={{zIndex:20,  backgroundImage:`url(${bg}`}}/>
               <Home />
             </Box>
           </Grid>
@@ -55,8 +57,8 @@ export default function App() {
           >
             <Box
               sx={{
-                paddingLeft: "15%",
-                paddingRight: "15%",
+                paddingLeft: "10%",
+                paddingRight: "10%",
                 paddingTop: "3%",
                 paddingBottom: "5%",
               }}

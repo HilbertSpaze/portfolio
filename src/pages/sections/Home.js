@@ -31,9 +31,9 @@ export default function Home(props) {
 
   return (
     <React.Fragment>
-          <Grid container alignItems="center" spacing={2}>
+          <Grid container alignItems="center" justifyContent="center" spacing={2}>
             <Grid item xs={12} sm={12} md={7} lg={7} xl={8}>
-              <Typography variant="h4" style={{color:'#45a29e'}}>Hi, I'm</Typography>
+              <Typography variant="h3" style={{color:'#45a29e'}}>Hi, I'm</Typography>
               <BounceText text={`Hilbert,`} />
 
               <Fade in timeout={1000}>

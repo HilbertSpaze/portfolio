@@ -27,7 +27,7 @@ export default function Projects() {
   return (
     <>
   <Box sx={{ paddingBottom: 10, maxHeight:'100vh', width:'100%'}}>
-    <Divider><Typography variant="h2" style={{fontWeight:'bold', fontSize:90, color:'#1F2833'}}>PROJECTS</Typography></Divider>
+    <Divider><Typography variant="h2" style={{fontWeight:'bold', fontSize:70, color:'#1F2833'}}>PROJECTS</Typography></Divider>
     <Typography style={{fontSize:27, marginBottom:30}}>Here are some projects I did, outside of my job. </Typography>
     
       <Tabs

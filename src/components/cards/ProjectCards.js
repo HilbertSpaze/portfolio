@@ -70,15 +70,16 @@ export default function ProjectCard(props) {
         className={classes.root}
         classes={{ root: state.raised ? classes.cardHovered : "" }}
         onMouseOver={() => {setState({ raised: true, shadow: 8, tooltip: true });
-      setBrightness('80%')}}
+      setBrightness('70%')}}
         onMouseOut={() =>
           {setState({ raised: false, shadow: 4, tooltip: false });
-        setBrightness('50%')}
+        setBrightness('40%')}
         }
         raised={state.raised}
         zdepth={state.shadow}
         style={styles.card}
         sx={{
+          
           width: "auto",
           height: "auto",
           margin: 0.5,

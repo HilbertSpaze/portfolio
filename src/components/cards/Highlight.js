@@ -11,20 +11,21 @@ export default function Highlight(props) {
     const {icon, title, duration} = props
   return (
     <>
-    <Box>
-      <Card elevation={3} sx={{minWidth:'80%', maxWidth:'90%',background:'#2f3f52', color:'white'}}>
+
+    <div>
+      <Card elevation={3} sx={{minWidth:'80%', maxWidth:'100%',background:'#2f3f52', color:'white'}}>
           <CardContent sx={{ textAlign: "center" }}>
-            {icon}
-            <Typography variant="h6" gutterBottom>
-              {title}
+            {icon?icon:'defaulkt'}
+            <Typography variant="h6" style={{fontWeight:550, color:'#e3fefc' }}>
+              {title?title:'defaulkt'}
             </Typography>
 
-            <Typography variant="h6" >
-              {duration}
+            <Typography variant="h6" style={{fontWeight:'bold',color:'#66FCF1', fontSize:25}} >
+              {duration?duration:'defaulkt'}
             </Typography>
           </CardContent>
       </Card>
-    </Box>
+    </div>
     </>
   );
 }

@@ -37,7 +37,7 @@ useFrame((state, delta) => {
         ref={ref}
         object={gltf.scene}
         position={position}
-        scale={4}
+        scale={3}
 
       />
     </>

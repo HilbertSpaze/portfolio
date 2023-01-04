@@ -12,7 +12,7 @@ const ModelViewer = ({ modelPath, position = [0, 0, 0] }) => {
         <directionalLight/>
       <Suspense fallback={null}>
         <GltfModel modelPath={modelPath} position={position} />
-        <OrbitControls enableZoom={false} enableRotate={false}/>
+        <OrbitControls enableZoom={false}/>
       </Suspense>
     </Canvas>
   );
