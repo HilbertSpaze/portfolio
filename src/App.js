@@ -2,9 +2,8 @@ import React from "react";
 import Home from "./pages/sections/Home";
 import About from "./pages/sections/About";
 import Projects from "./pages/sections/Projects";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import ResponsiveAppBar from "./components/layout/Appbar";
-import bg from "./assets/svgs/about.svg";
 
 export default function App() {
   return (
@@ -15,18 +14,20 @@ export default function App() {
           <Grid
             item
             xs={12}
-            style={{ background:'#0b0c10', minHeight: "102vh" }}
+            style={{  minHeight: "102vh"}}
           >
             <Box
               sx={{
                 // backgroundImage:`url(${bg})`,
+                background:'#0b0c10',
                 paddingLeft: "20%",
                 paddingRight: "20%",
                 paddingTop: "10%",
                 paddingBottom: "10%",
+                zIndex:-1,
               }}
             >
-              <Box sx={{zIndex:20,  backgroundImage:`url(${bg}`}}/>
+              <Box sx={{zIndex:1}}/>
               <Home />
             </Box>
           </Grid>

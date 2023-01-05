@@ -1,20 +1,16 @@
-import React, { useEffect, useState } from "react";
-import { Grid, Box, Grow } from "@mui/material";
+import React from "react";
+import { Grid, Box } from "@mui/material";
 import projectList from "../pages/subpage/Project/ProjectMetaData";
 import ProjectCard from "../components/cards/ProjectCards"
 
 export default function GenerateGrid(props) {
   const { tag } = props;
-  const [checked, setChecked] = useState(false);
   if (tag.valueOf() === "ALL") {
     var result = projectList;
   } else {
     result = projectList.filter((item) => item.tag.valueOf() === tag);
   }
 
-  useEffect(() => {
-    setChecked(true);
-  }, [tag]);
 
   return (
     <Box sx={{maxHeight:'100vh', maxWidth:'100%'}} >

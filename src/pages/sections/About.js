@@ -1,4 +1,4 @@
-import { Box, Grid, Divider, Typography, Paper, Stack } from "@mui/material";
+import { Box, Grid, Paper } from "@mui/material";
 
 import React from "react";
 import user from "../../assets/images/paris_crop.jpg";
@@ -9,6 +9,7 @@ import WorkIcon from '@mui/icons-material/Work';
 import { AnimatedHeader } from "../../components/headers/AnimatedHeader";
 import { Window } from "../../components/cards/AnimatedPopCard";
 
+
 export default function About() {
 
 
@@ -16,7 +17,7 @@ export default function About() {
     <>
       <Box
       >
-        <AnimatedHeader title={'ABOUT ME'} color={'#66FCF1'}></AnimatedHeader>    
+        <AnimatedHeader title={'ABOUT ME'} color={'#66FCF1'}></AnimatedHeader> 
         
         <Grid
           container
@@ -26,7 +27,9 @@ export default function About() {
         >
           <Grid  item xs={12} sm={12} md={12} lg={4} xl={3.5}>
             
-          
+          <Window
+          rootMargin={'0%'}
+          childElement={
             <Box
               component="img"
               src={user}
@@ -41,7 +44,7 @@ export default function About() {
                   xl: "100%",
                 },
               }}
-            />
+            />}/>
            
 
 
@@ -59,32 +62,41 @@ export default function About() {
             <Grid container spacing={4} columns={15}>
               <Grid item xs={5} >
                 
-                <Highlight
+                <Window
+                rootMargin={'0%' }
+                childElement={<Highlight
                   title={"Data Scientist"}
                   duration={"3+ years"}
-                  icon={<AnalyticsIcon style={{fontSize:40, color:'#9faebf'}}/>}
+                  icon={<AnalyticsIcon style={{fontSize:40, color:'#9faebf'}}/>}/>}
                 />
               </Grid>
 
               <Grid item xs={5} >
-                <Highlight
+                <Window
+                  rootMargin={'0%'}
+                  childElement={<Highlight
                   title={"Work Experience"}
                   duration={"6+ years"}
                   icon={<WorkIcon  style={{fontSize:40, color:'#9faebf'}}/>}
+                  />}
                 />
               </Grid>
               <Grid item xs={5} >
-                <Highlight
+                <Window 
+                rootMargin={'0%'}
+                childElement={<Highlight 
                   title={"Project Impact (Work)"}
                   duration={"300K USD"}
-                  icon={<SavingsIcon  style={{fontSize:40,color:'#9faebf'}}/>}
-                />
+                  icon={<SavingsIcon  style={{fontSize:40,color:'#9faebf'}}/>}/>}/>
               </Grid>
             </Grid>
             </Grid>
             
 
             <Grid item>
+              <Window 
+              rootMargin={'20%'}
+              childElement={
             <Paper elevation={5} sx={{padding:5, background:'#2f3f52'}}>
               <p
                 className="lead"
@@ -112,7 +124,7 @@ export default function About() {
                 Outside of work, I love to travelling, do landscape photography,
                 play video games, badminton or watch NBA.
               </p>
-              </Paper>
+              </Paper>}/>
               </Grid>
 
             

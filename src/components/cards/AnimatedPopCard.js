@@ -1,28 +1,28 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import { useInView, useSpring, animated } from '@react-spring/web'
-import Highlight from './Highlight'
 
 import { buildInteractionObserverThreshold } from '../../utils/threshold'
 
-const AnimatedWindow = animated(Highlight)
 
-export const Window = () => {
-    
+export const Window = (props) => {
+  const {childElement, rootMargin} = props   
   const [ref, isInView] = useInView({
-    rootMargin: '-45% 0px -45% 0px',
+    rootMargin: `${rootMargin}`,
     amount: buildInteractionObserverThreshold(),
   })
 
 
   const styles = useSpring({
-    scale: isInView ? 2.5 : 0,
+    scale: isInView ? 1 : 0.8,
+    opacity: isInView ? 1: 0,
     config: {
-      tension: 1300,
+      tension: 120,
     },
   })
 
   return (
-    <AnimatedWindow style={styles} ref={ref} className="window">
-    </AnimatedWindow>
+    <animated.div style={styles} ref={ref}>
+      {childElement}
+    </animated.div>
   )
 }

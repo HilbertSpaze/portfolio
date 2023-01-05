@@ -4,22 +4,22 @@ import { useInView, animated } from '@react-spring/web'
 import { buildInteractionObserverThreshold } from '../../utils/threshold'
 
 export const AnimatedHeader = (props) => {
-  const {color, title} = props
+  const {color, title, fontSize} = props
   const [ref, springs] = useInView(
     () => ({
       from: {
         opacity: 0,
-        y: 80,
+        y: 100,
       },
       to: {
         opacity: 1,
         color:`${color}`,
-        fontSize:70,
+        fontSize:fontSize,
         y: 0,
       },
     }),
     {
-      rootMargin: '35% 0px -45% 0px',
+      // rootMargin: '35% 0px -45% 0px',
       amount: buildInteractionObserverThreshold(),
     }
   )

@@ -1,14 +1,11 @@
 import { Box, Button, Divider, Paper, Tab, Tabs, Typography, Grid } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
-import GenerateGrid from "../../utils/generateGrid";
 import Fade from "@mui/material/Fade";
-import { Container } from "@mui/material";
-import { styled as styled1 } from "@mui/material/styles";
 import BounceText from "../../components/animation/Bounce";
 import TagCloudSkill from "../../components/animation/TagCloudSkill";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import user from "../../assets/images/paris_crop.jpg";
+
 
 export default function Home(props) {
   const myRef = useRef(null)
@@ -31,7 +28,7 @@ export default function Home(props) {
 
   return (
     <React.Fragment>
-          <Grid container alignItems="center" justifyContent="center" spacing={2}>
+          <Grid  container alignItems="center" justifyContent="center" spacing={2}>
             <Grid item xs={12} sm={12} md={7} lg={7} xl={8}>
               <Typography variant="h3" style={{color:'#45a29e'}}>Hi, I'm</Typography>
               <BounceText text={`Hilbert,`} />
