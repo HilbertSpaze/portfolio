@@ -36,15 +36,16 @@ export default function App() {
             item
             xs={12}
             style={{
-              // background:"#c5c6c7",
+              // background:"linear-gradient(to bottom, #24243e, #302b63, #24243e)",
               minHeight: "105vh",
             }}
           >
             <Box
               sx={{
-                paddingLeft: "15%",
-                paddingRight: "15%",
-                paddingTop: "8%",
+                paddingLeft: "13%",
+                paddingRight: "13%",
+                paddingTop: "5%",
+                // paddingBottom:"3%"
               }}
             >
               <Projects />
@@ -56,14 +57,14 @@ export default function App() {
             xs={12}
             style={{ 
               // background:'linear-gradient(to bottom, #0f0c29, #302b63, #24243e)',
-             minHeight: "102vh" }}
+             minHeight: "90vh" }}
           >
             <Box
               sx={{
-
-                paddingLeft: "15%",
-                paddingRight: "15%",
-                paddingTop: "5%",
+                background:'linear-gradient(to bottom, #ffffff, #f5f5ff, #ffffff)',
+                paddingLeft: "13%",
+                paddingRight: "13%",
+                // paddingTop: "-15%",
               }}
             >
               <About />

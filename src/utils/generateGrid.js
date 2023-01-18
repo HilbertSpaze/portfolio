@@ -16,14 +16,14 @@ export default function GenerateGrid(props) {
 
 
   return (
-    <Box sx={{maxHeight:'100vh', maxWidth:'100%'}} >
+    <Box sx={{maxHeight:'102vh', maxWidth:'100%'}} >
       {result.length > 0 ? (
         // <Grid
         //   container
         //   spacing={{ xs: 1, sm: 2, md: 1, lg: 2, xl:2 }}
         //   alignItems="center"
         // >
-        <Carousel autoPlay infiniteLoop  interval = {3000} showArrows centerMode centerSlidePercentage={(1/3)*100}>
+        <Carousel autoPlay infiniteLoop  interval = {3000} showArrows centerMode showThumbs={false} centerSlidePercentage={(1/3)*100} >
           {result.map((item, index) => (
             
               // <Grid item xs={12} sm={12} md={6} lg={4} xl={3} key={index} >

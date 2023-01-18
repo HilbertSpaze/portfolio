@@ -135,7 +135,7 @@ export default function About() {
                       style={{
                         color: "#FFFFFE",
                         textAlign: "justify",
-                        fontSize: "1.15rem",
+                        fontSize: "1.20rem",
                       }}
                     >
                       Hi there! I have had the opportunity to work on a variety

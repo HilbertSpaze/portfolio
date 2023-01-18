@@ -10,9 +10,9 @@ export default function Typing(props) {
         2000, // Waits 2s
         'DATA LOVER', // Types 'Three' without deleting 'Two'
         2000,
-        () => {
-          console.log('Done typing!'); // Place optional callbacks anywhere in the array
-        }
+        // () => {
+        //   ; // Place optional callbacks anywhere in the array
+        // }
       ]}
       wrapper="div"
       cursor={true}

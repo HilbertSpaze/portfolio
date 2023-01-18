@@ -118,7 +118,7 @@ export default function ResponsiveAppBar(props) {
     <AppBar
       position="fixed"
       style={{
-        background: `#E2E2E2`,
+        background: `linear-gradient(to left, #f0f2f0,#edebff,#f0f2f0)`,
         boxShadow: "none",
         // backdropFilter: "blur(20px)",
       }}

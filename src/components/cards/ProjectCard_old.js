@@ -7,15 +7,15 @@ import {
   Card,
   CardActionArea,
   CardMedia,
-  CardContent,
+  Paper,
   Typography,
   Tooltip,
 } from "@mui/material";
 
 export default function ProjectCard(props) {
   const { title, img,  technologies, path } = props;
-  // const [brightness, setBrightness] = useState('40%')
-  // const [opacity, setOpacity] = useState(0.8)
+  const [brightness, setBrightness] = useState('40%')
+  const [opacity, setOpacity] = useState(0.8)
   // const navigate = useNavigate();
   const useStyles = styled({
     root: {
@@ -23,11 +23,29 @@ export default function ProjectCard(props) {
     },
   });
 
+  const styles = {
+    media: {
+      height: 0,
+      paddingTop: "56.25%", // 16:9
+    },
+    card: {
+      position: "relative",
+      marginBottom:"10",
+      borderRadius:10
+    },
+    overlay: {
+      position: "absolute",
+      bottom: 0,
+      left: 0,
+      width: "100%",
+      // padding: "20px",
+    },
+  };
 
   const classes = useStyles();
   const [state, setState] = useState({
     raised: false,
-    // shadow: 1,
+    shadow: 4,
   });
 
   return (
@@ -53,23 +71,25 @@ export default function ProjectCard(props) {
       }}
     >
       <Card
-        // key={title}
-        // className={classes.root}
+        className={classes.root}
         classes={{ root: state.raised ? classes.cardHovered : "" }}
-        onMouseOver={() => {setState({ raised: true,  tooltip: true });}}
+        onMouseOver={() => {setState({ raised: true, shadow: 8, tooltip: true });
+      setBrightness('80%');
+    setOpacity(1)}}
         onMouseOut={() =>
-          {setState({ raised: false, tooltip: false });
-        }
+          {setState({ raised: false, shadow: 4, tooltip: false });
+        setBrightness('40%');
+        setOpacity(0.8)}
         }
         raised={state.raised}
-        elevation={0}
-        style={{borderRadius:20,  margin:'3%',}}
+        zdepth={state.shadow}
+        style={styles.card}
         sx={{
           
           width: "auto",
-          height: '95%',
+          height: "auto",
           margin: 0.5,
-          "&:hover": { transform: "scale3d(1.03, 1.03, 1.03)" },
+          "&:hover": { transform: "scale3d(1.05, 1.05, 1.1)" },
         }}
       >
         <CardActionArea
@@ -79,17 +99,16 @@ export default function ProjectCard(props) {
         >
           <CardMedia
             component="img"
-            height="255"
+            height="325"
             image={img}
             alt="green iguana"
-            style={{ paddingLeft:10, paddingRight:10, paddingTop:10,borderRadius:40,  filter: 'brightness(85%)' }}
+            style={{ filter: `brightness(${brightness}) ` }}
           />
-          <CardContent>
-          <Box >
+          <Box style={styles.overlay}>
 
             <Typography
-              variant="h6"
-              style={{  color: "#21201E", fontWeight:650, fontSize:21}}
+              variant="h5"
+              style={{  fontWeight: "bold", color: "white", }}
               
             >
               {title}
@@ -98,12 +117,11 @@ export default function ProjectCard(props) {
 
             <Typography
               variant="subtitle1"
-              style={{ color: "#21201E", marginTop: 10, fontSize: 15, opacity:0.7}}
+              style={{ color: "white", marginTop: 10, fontSize: 15, opacity:0.7}}
             >
               {technologies}
             </Typography>
           </Box>
-          </CardContent>
         </CardActionArea>
       </Card>
     </Tooltip>
