@@ -19,11 +19,11 @@ export default function App() {
             <Box
               sx={{
                 // backgroundImage:`url(${bg})`,
-                background:'#0b0c10',
+                background:'linear-gradient(to right, #000000, #434343)',
                 paddingLeft: "20%",
                 paddingRight: "20%",
                 paddingTop: "10%",
-                paddingBottom: "10%",
+                paddingBottom:"10%",
                 zIndex:-1,
               }}
             >
@@ -35,38 +35,42 @@ export default function App() {
           <Grid
             item
             xs={12}
-            style={{ background: "#1F2833", minHeight: "102vh" }}
+            style={{
+              // background:"#c5c6c7",
+              minHeight: "105vh",
+            }}
           >
             <Box
               sx={{
                 paddingLeft: "15%",
                 paddingRight: "15%",
-                paddingTop: "3%",
-                paddingBottom: "5%",
+                paddingTop: "8%",
               }}
             >
-              <About />
+              <Projects />
             </Box>
           </Grid>
 
           <Grid
             item
             xs={12}
-            style={{
-              minHeight: "102vh",
-            }}
+            style={{ 
+              // background:'linear-gradient(to bottom, #0f0c29, #302b63, #24243e)',
+             minHeight: "102vh" }}
           >
             <Box
               sx={{
-                paddingLeft: "10%",
-                paddingRight: "10%",
-                paddingTop: "3%",
-                paddingBottom: "5%",
+
+                paddingLeft: "15%",
+                paddingRight: "15%",
+                paddingTop: "5%",
               }}
             >
-              <Projects />
+              <About />
             </Box>
           </Grid>
+
+
         </Grid>
       </div>
     </>

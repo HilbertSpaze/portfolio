@@ -10,11 +10,13 @@ export const AnimatedHeader = (props) => {
       from: {
         opacity: 0,
         y: 100,
+        textAlign:"center"
       },
       to: {
         opacity: 1,
         color:`${color}`,
         fontSize:fontSize,
+        textAlign:"center",
         y: 0,
       },
     }),

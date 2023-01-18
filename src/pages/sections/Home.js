@@ -1,10 +1,11 @@
-import { Box, Button, Divider, Paper, Tab, Tabs, Typography, Grid } from "@mui/material";
+import { Button,  Typography, Grid, Stack } from "@mui/material";
 import React, { useState, useEffect, useRef } from "react";
 import Fade from "@mui/material/Fade";
 import BounceText from "../../components/animation/Bounce";
 import TagCloudSkill from "../../components/animation/TagCloudSkill";
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Typing from "../../components/animation/Typing";
 
 
 export default function Home(props) {
@@ -32,12 +33,15 @@ export default function Home(props) {
             <Grid item xs={12} sm={12} md={7} lg={7} xl={8}>
               <Typography variant="h3" style={{color:'#45a29e'}}>Hi, I'm</Typography>
               <BounceText text={`Hilbert,`} />
-
+              <Stack direction="row" style={{alignItems:"center"}}>
+              <Typography variant="h2" sx={{ color: "#c5c6c7", marginRight:'2%' }}>a</Typography>
+              <Typing/>
+              </Stack>
               <Fade in timeout={1000}>
                 <div>
-                  <Typography variant="h2" sx={{ color: "#c5c6c7" }}>
+                  {/* <Typography variant="h2" sx={{ color: "#c5c6c7" }}>
                     a <strong style={{color:'#56f7fc', fontSize:75, fontWeight:650}}>DATA SCIENTIST.</strong>
-                  </Typography>
+                  </Typography> */}
                   <Typography
                     variant="h6"
                     style={{ color: "#c5c6c7", fontSize:28, marginTop: 10 }}

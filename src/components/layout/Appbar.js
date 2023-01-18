@@ -118,7 +118,7 @@ export default function ResponsiveAppBar(props) {
     <AppBar
       position="fixed"
       style={{
-        background: `transparent`,
+        background: `#E2E2E2`,
         boxShadow: "none",
         // backdropFilter: "blur(20px)",
       }}
@@ -173,7 +173,7 @@ export default function ResponsiveAppBar(props) {
                   sx={{
                     my: 2,
                     display: "block",
-                    color: `#00ADB5`,
+                    color: `black`,
                     fontWeight: "bold",
                   }}
                 >
@@ -188,7 +188,7 @@ export default function ResponsiveAppBar(props) {
                   sx={{
                     my: 2,
                     display: "block",
-                    color: `#00ADB5`,
+                    color: `black`,
                     fontWeight: "bold",
                   }}
                 >
@@ -201,14 +201,14 @@ export default function ResponsiveAppBar(props) {
           <IconButton
             href="https://www.linkedin.com/in/hlazatin"
             target="_blank"
-            style={{ color: `#00ADB5` }}
+            style={{ color: `black` }}
           >
             <LinkedInIcon style={{ fontSize: 35 }} />
           </IconButton>
           <IconButton
             href="https://github.com/hlazatin"
             target="_blank"
-            style={{ color: `#00ADB5` }}
+            style={{ color: `black` }}
           >
             <GitHubIcon style={{ fontSize: 35 }} />
           </IconButton>

@@ -15,7 +15,7 @@ export default function BounceText(props) {
 	return (
 	<>
       <Bounce>
-        <Typography variant="h1" sx={{ fontSize:125,color: "lightgray", fontWeight:450 }}>
+        <Typography variant="h1" sx={{ fontSize:120,color: "lightgray", fontWeight:450 }}>
           <span style={{ color: "white" }}>
             <strong> {text} </strong>
           </span>
@@ -24,3 +24,4 @@ export default function BounceText(props) {
     </>
   );
 }
+

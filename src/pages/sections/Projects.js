@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import {
   Box,
+  Button,
+  Card,
+  Grid,
   Tabs,
   Tab,
 } from "@mui/material";
@@ -11,63 +14,53 @@ import { Window } from "../../components/cards/AnimatedPopCard";
 
 export default function Projects() {
   const [value, setValue] = useState("ALL");
+
+  const StyledButton = (props) => (
+    <Button
+      variant="outlined" 
+      sx={{color:'#7303c0', border: '2px solid', borderColor:'#7303c0', fontWeight:'bold'}}
+    >
+      {props.children}
+    </Button>
+  );
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const StyledTab = styled((props) => <Tab disableRipple {...props} />)(
-    ({ theme }) => ({
-      textTransform: "none",
-      fontSize: 19,
-      color: "black",
-      marginRight: theme.spacing(1),
-      "&:hover": {
-        color: "#45A29E",
-        opacity: 1,
-      },
-      "&.Mui-selected": {
-        color: "#1F2833",
-        backgroundColor: "#66FCF1",
-      },
-    })
-  );
+
   return (
     <>
       <Box sx={{ paddingBottom: 10, maxHeight: "100vh", width: "100%" }}>
+        <Card elevation={0} style={{background:'linear-gradient(to bottom, #f0f2f0,#edebff,#f0f2f0)',  borderRadius:50}} sx={{paddingLeft:'7%', paddingRight:'7%', paddingTop:'3%', paddingBottom:'3%'}}>
         <AnimatedHeader
-          title={"PROJECTS"}
-          color={"#1F2833"}
+          title={"Projects"}
+          color={"#0f0d1c"}
           fontSize={70}
         ></AnimatedHeader>
         <AnimatedHeader
           title={"Here are some projects I did, outside of my job."}
-          color={"#1F2833"}
-          fontSize={30}
+          color={"black"}
+          fontSize={10}
         ></AnimatedHeader>
         
         <Window rootMargin={'0%'}
         childElement={
-        <Tabs
-          value={value}
-          scrollButtons="auto"
-          allowScrollButtonsMobile
-          centered
-          onChange={handleChange}
-          TabIndicatorProps={{ style: { background: "transparent" } }}
-          sx={{
-            marginTop: "2%",
-            "& .MuiTabs-flexContainer": {
-              flexWrap: "wrap",
-              marginBottom: 1,
-            },
-          }}
-        >
-          <StyledTab label="All" value="ALL" />
-          <StyledTab label="Machine Learning" value="ML" />
-          <StyledTab label="Big Data Analytics" value="BD" />
-          <StyledTab label="Data Mining" value="DMW" />
-        </Tabs>
-        }/>
-        <Window rootMargin={"0%"} childElement={<GenerateGrid tag={value} />} />
+          <Grid container justifyContent={"center"} spacing={1} sx={{marginBottom:'2%'}}>
+            <Grid item>
+            <StyledButton >ALL</StyledButton>
+            </Grid>
+            <Grid item>
+            <StyledButton>Machine Learning</StyledButton>
+            </Grid>
+            <Grid item>
+            <StyledButton variant="outlined" style={{color:'#7303c0', border: '2px solid', borderColor:'#7303c0', fontWeight:'bold'}}>Big Data</StyledButton>
+            </Grid>
+            <Grid item>
+            <StyledButton variant="outlined" style={{color:'#7303c0', border: '2px solid', borderColor:'#7303c0', fontWeight:'bold'}}>Data Mining / EDA</StyledButton>
+            </Grid>
+        
+        </Grid>}/>
+        <GenerateGrid tag={value} />
+        </Card>
       </Box>
     </>
   );
