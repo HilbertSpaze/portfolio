@@ -47,8 +47,8 @@ export default function Home(props) {
                     style={{ color: "#c5c6c7", fontSize:28, marginTop: 10 }}
                   >
                     I help <span style={{ fontWeight:600, color: "white" }}>translate data into value </span> 
-                    through <span style={{ fontWeight:600, color: "white" }}>data analytics</span> and
-                    <span style={{ fontWeight:600, color: "white" }}> web development.</span>
+                    through <span style={{ fontWeight:600, color: "white" }}>data analytics</span> 
+                    {/* and <span style={{ fontWeight:600, color: "white" }}> web development.</span> */}
                   </Typography>
                   <Grid spacing={{ xs: 0, sm: 2, md: 2, lg: 3, xl:3 }} container  style={{alignItems:'center'}}>
                     <Grid 

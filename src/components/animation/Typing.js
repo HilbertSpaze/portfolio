@@ -6,7 +6,7 @@ export default function Typing(props) {
       sequence={[
         'DATA SCIENTIST', // Types 'One'
         2000, // Waits 1s
-        'DATA WRANGLER', // Deletes 'One' and types 'Two'
+        'DATA GEEK', // Deletes 'One' and types 'Two'
         2000, // Waits 2s
         'DATA LOVER', // Types 'Three' without deleting 'Two'
         2000,
@@ -17,7 +17,7 @@ export default function Typing(props) {
       wrapper="div"
       cursor={true}
       repeat={Infinity}
-      style={{ fontSize:75,  color:"#5afae4", fontWeight:650 }}
+      style={{ fontSize:70,  color:"#5afae4", fontWeight:650 }}
     />
   );
 };

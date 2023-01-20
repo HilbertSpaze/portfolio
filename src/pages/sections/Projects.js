@@ -19,7 +19,7 @@ export default function Projects() {
   const StyledButton = (props) => (
     <Button
       variant="outlined" 
-      sx={{color:'#7303c0', border: '2px solid', borderColor:'#7303c0', fontSize:18, fontWeight:'bold'}}
+      sx={{color:'#7303c0', border: '2px solid', borderColor:'#7303c0', fontSize:18, fontWeight:'bold', borderRadius:3,}}
     >
       {props.children}
     </Button>
@@ -39,7 +39,7 @@ export default function Projects() {
           fontSize={70}
         ></AnimatedHeader> */}
 
-        <Typography variant="h6" textAlign={"center"} style={{color:"#0f0d1c", fontSize:80, fontWeight:525}}>Projects</Typography>
+        <Typography variant="h6" textAlign={"center"} style={{color:"#0a1029", fontSize:80, fontWeight:525}}>Projects</Typography>
         <Typography variant="h6" textAlign={"center"} style={{color:"#0f0d1c", fontSize:20}}>Here are some projects I did (personal / classroom).</Typography>
         {/* <AnimatedHeader
           title={"Here are some projects I did, outside of my job."}

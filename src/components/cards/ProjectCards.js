@@ -79,7 +79,7 @@ export default function ProjectCard(props) {
         >
           <CardMedia
             component="img"
-            height="255"
+            height="200"
             image={img}
             alt="green iguana"
             style={{ paddingLeft:10, paddingRight:10, paddingTop:10,borderRadius:40,  filter: 'brightness(85%)' }}
@@ -89,7 +89,7 @@ export default function ProjectCard(props) {
 
             <Typography
               variant="h6"
-              style={{  color: "#21201E", fontWeight:650, fontSize:21}}
+              style={{  color: "#21201E", fontWeight:650, fontSize:22}}
               
             >
               {title}

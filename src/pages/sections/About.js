@@ -15,7 +15,7 @@ export default function About() {
       <Box>
         <Card
           variant="outlined"
-          style={{ background: "linear-gradient(to bottom, #24243e, #302b63, #24243e)", borderRadius: 40 }}
+          style={{ background: "linear-gradient(to bottom, #292d4a, #004e92, #292d4a)", borderRadius: 40 }}
           sx={{
             paddingLeft: "7%",
             paddingRight: "7%",
@@ -27,7 +27,7 @@ export default function About() {
           <Grid
             container
             alignItems="top"
-            spacing={4}
+            spacing={8}
             style={{ justifyContent: "center", marginTop: "1%" }}
           >
             <Grid item xs={12} sm={12} md={12} lg={4} xl={3.5}>
@@ -42,9 +42,9 @@ export default function About() {
                   <Box
                     component="img"
                     src={user}
-                    style={{ borderRadius: 8 }}
+                    style={{ borderRadius: 20 }}
                     sx={{
-                      marginBottom: "30%",
+                      // marginBottom: "30%",
                       width: {
                         xs: "80%",
                         sm: "100%",
@@ -79,7 +79,7 @@ export default function About() {
                           duration={"3+ years"}
                           icon={
                             <AnalyticsIcon
-                              style={{ fontSize: 40, color: "#9faebf" }}
+                              style={{ fontSize: 40, color: "white" }}
                             />
                           }
                         />
@@ -96,7 +96,7 @@ export default function About() {
                           duration={"6+ years"}
                           icon={
                             <WorkIcon
-                              style={{ fontSize: 40, color: "#9faebf" }}
+                              style={{ fontSize: 40, color: "white" }}
                             />
                           }
                         />
@@ -112,7 +112,7 @@ export default function About() {
                           duration={"300K USD"}
                           icon={
                             <SavingsIcon
-                              style={{ fontSize: 30, color: "#9faebf" }}
+                              style={{ fontSize: 30, color: "white" }}
                             />
                           }
                         />
@@ -138,8 +138,7 @@ export default function About() {
                         fontSize: "1.20rem",
                       }}
                     >
-                      Hi there! I have had the opportunity to work on a variety
-                      of data-driven projects across a range of industries,
+                      Hi there! I'm Hilbert Lazatin. I've been working data-driven projects across a range of industries,
                       including operations, supply chain, all of which has
                       created actionable insights, cost saving and increase in
                       profit.

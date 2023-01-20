@@ -198,7 +198,7 @@ export default function ResponsiveAppBar(props) {
             })}
           </Box>
 
-          <IconButton
+          {/* <IconButton
             href="https://www.linkedin.com/in/hlazatin"
             target="_blank"
             style={{ color: `black` }}
@@ -211,7 +211,7 @@ export default function ResponsiveAppBar(props) {
             style={{ color: `black` }}
           >
             <GitHubIcon style={{ fontSize: 35 }} />
-          </IconButton>
+          </IconButton> */}
 
           {/* <Typography
             variant="h6"

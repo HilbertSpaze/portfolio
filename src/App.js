@@ -4,6 +4,7 @@ import About from "./pages/sections/About";
 import Projects from "./pages/sections/Projects";
 import { Box, Grid } from "@mui/material";
 import ResponsiveAppBar from "./components/layout/Appbar";
+import Footer from "./pages/sections/Footer";
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
             <Box
               sx={{
                 // backgroundImage:`url(${bg})`,
-                background:'linear-gradient(to right, #000000, #434343)',
+                background:'linear-gradient(to right,#060913, #171d36)',
                 paddingLeft: "20%",
                 paddingRight: "20%",
                 paddingTop: "10%",
@@ -36,7 +37,7 @@ export default function App() {
             item
             xs={12}
             style={{
-              // background:"linear-gradient(to bottom, #24243e, #302b63, #24243e)",
+              background:"#fcfffc",
               minHeight: "105vh",
             }}
           >
@@ -56,15 +57,15 @@ export default function App() {
             item
             xs={12}
             style={{ 
-              // background:'linear-gradient(to bottom, #0f0c29, #302b63, #24243e)',
+              background:'linear-gradient(to bottom, #fcfffc, #f5f6ff, #f5f6ff)',
              minHeight: "90vh" }}
           >
             <Box
               sx={{
-                background:'linear-gradient(to bottom, #ffffff, #f5f5ff, #ffffff)',
+                // background:'linear-gradient(to bottom, #ffffff, #f5f5ff, #ffffff)',
                 paddingLeft: "13%",
                 paddingRight: "13%",
-                // paddingTop: "-15%",
+                paddingTop: "2%",
               }}
             >
               <About />
@@ -72,6 +73,17 @@ export default function App() {
           </Grid>
 
 
+
+
+          <Grid
+            item
+            xs={12}
+            style={{ background:'linear-gradient(to bottom, #2f354a, #11182e, #060913)', minHeight: "20vh"}}
+          >
+
+              <Footer/>
+
+          </Grid>
         </Grid>
       </div>
     </>
