@@ -37,7 +37,7 @@ export default function App() {
             item
             xs={12}
             style={{
-              background:"#fcfffc",
+              // background:"#fcfffc",
               minHeight: "105vh",
             }}
           >
@@ -57,33 +57,49 @@ export default function App() {
             item
             xs={12}
             style={{ 
-              background:'linear-gradient(to bottom, #fcfffc, #f5f6ff, #f5f6ff)',
+            
              minHeight: "90vh" }}
           >
-            <Box
-              sx={{
-                // background:'linear-gradient(to bottom, #ffffff, #f5f5ff, #ffffff)',
-                paddingLeft: "13%",
-                paddingRight: "13%",
-                paddingTop: "2%",
-              }}
-            >
-              <About />
+            <Box 
+            sx={{
+              background:'linear-gradient(to top, #3167f7, #5b86fc, #7399ff, #b0c5ff )',
+              borderTopLeftRadius:50,
+              borderTopRightRadius:50,
+              minHeight: "90vh",
+              
+            }}
+          >
+              <Box
+                
+                sx={{
+                  // background:'linear-gradient(to bottom, #ffffff, #f5f5ff, #ffffff)',
+                  paddingLeft: "13%",
+                  paddingRight: "13%",
+                  paddingTop: "5.5%",
+                  
+                }}
+
+                // style={{backdropFilter: "blur(1115px)"}}
+              >
+                <About />
+                <Footer/>
+
+              </Box>
             </Box>
           </Grid>
 
 
 
 
-          <Grid
+          {/* <Grid
             item
             xs={12}
-            style={{ background:'linear-gradient(to bottom, #2f354a, #11182e, #060913)', minHeight: "20vh"}}
+            style={{ background:'linear-gradient(to right,#060913, #171d36)', minHeight: "20vh"}}
           >
 
-              <Footer/>
+              
 
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
     </>

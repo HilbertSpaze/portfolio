@@ -3,7 +3,6 @@ import sketch from "../../../assets/images/sketch_final.gif";
 import fmask from "../../../assets/images/facemask.gif";
 import pollute from "../../../assets/images/pollution.gif";
 import dweb from "../../../assets/images/deepweb.gif";
-import nba from "../../../assets/images/nba.webp";
 import vib from "../../../assets/images/vib.gif";
 import stocks from "../../../assets/images/stocks.gif";
 
@@ -11,7 +10,7 @@ import stocks from "../../../assets/images/stocks.gif";
 
 const projectList = [
   {
-    title: "Causal Analysis between Commmodity and US Stock Market",
+    title: "Causal Analysis on Financial Markets",
     tag: "ML",
     desc: <div>This study aims to uncover granger causality between financial markets.</div>,
     cover: stocks,
@@ -35,13 +34,7 @@ const projectList = [
     cover: sketch,
     technologies: " GANs, pix2pix, U-NET",
   },
-  {
-    title: "Predicting who would win in an NBA match?",
-    tag: "ML",
-    desc: <div>Built an ML model that predicts who would win in an nba match up based on current stats.</div>,
-    cover: nba,
-    technologies: "Machine Learning, Simulations"
-  },
+
 
   {
     title: "Analyzing vibration data",

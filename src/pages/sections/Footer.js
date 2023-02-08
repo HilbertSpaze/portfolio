@@ -11,68 +11,43 @@ export default function Footer() {
   return (
     <>
 
-      <Box style={{paddingLeft:'15%'}} >
-      <Typography variant="subtitle1" style={{color:'#e6e6ff', marginTop:'0.5%', fontSize:30}}>Get in Touch</Typography>
+      <Box style={{paddingTop:'6.5%', paddingBottom:'5%'}} textAlign={"center"}>
+      <Typography variant="body1" style={{color:'#ededff', marginTop:'0.5%', fontSize:25}}>Let's Work Together</Typography>
     {/* <Divider style={{backgroundColor:'white'}}/> */}
         
 
         <Grid
           spacing={3}
-          // justifyContent={"center"}
+          justifyContent={"center"}
           container
           // alignItems={"center"}
           direction="row"
           style={{marginTop:'0%'}}
         >
           <Grid item>
-            <Avatar
-              style={{
-                backgroundColor: "transparent",
-                border: "2px solid white",
-              }}
-            >
-              <EmailIcon style={{ fontSize: 28, }} />
-            </Avatar>
+
+              <EmailIcon style={{ fontSize: 42,color:'#d5d5e3', }} />
+
           </Grid>
           <Grid item>
-            <Avatar
-              style={{
-                backgroundColor: "transparent",
-                border: "2px solid white",
-              }}
-            >
-              <FacebookIcon style={{ fontSize: 28 }} />
-            </Avatar>
+
+              <FacebookIcon style={{ fontSize: 42,color:'#d5d5e3', }} />
+
           </Grid>
           <Grid item>
-            <Avatar
-              style={{
-                backgroundColor: "transparent",
-                border: "2px solid white",
-              }}
-            >
-              <LinkedInIcon style={{ fontSize: 28 }} />
-            </Avatar>
+
+              <LinkedInIcon style={{ fontSize: 42,color:'#d5d5e3', }} />
+
           </Grid>
           <Grid item>
-            <Avatar
-              style={{
-                backgroundColor: "transparent",
-                border: "2px solid white",
-              }}
-            >
-              <GitHubIcon style={{ fontSize: 28 }} />
-            </Avatar>
+
+              <GitHubIcon style={{ fontSize: 42,color:'#d5d5e3', }} />
+
           </Grid>
           <Grid item>
-            <Avatar
-              style={{
-                backgroundColor: "transparent",
-                border: "2px solid white",
-              }}
-            >
-              <WhatsAppIcon style={{ fontSize: 28 }} />
-            </Avatar>
+
+              <WhatsAppIcon style={{ fontSize: 42,color:'#d5d5e3', }} />
+
           </Grid>
         </Grid>
         {/* <Divider style={{backgroundColor:'white', margin:'1%'}}/> */}

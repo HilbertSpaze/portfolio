@@ -14,14 +14,15 @@ export default function About() {
     <>
       <Box>
         <Card
-          variant="outlined"
-          style={{ background: "linear-gradient(to bottom, #292d4a, #004e92, #292d4a)", borderRadius: 40 }}
+          // variant="outlined"
+          style={{ background: "transparent", borderRadius: 10 }}
+          elevation={0}
           sx={{
-            paddingLeft: "7%",
-            paddingRight: "7%",
-            paddingTop: "3%",
-            paddingBottom: "3%",
-            border: "1px solid lightgray",
+            // paddingLeft: "7%",
+            // paddingRight: "7%",
+            // paddingTop: "3%",
+            // paddingBottom: "3%",
+            // border: "1px solid lightgray",
           }}
         >
           <Grid
@@ -112,7 +113,7 @@ export default function About() {
                           duration={"300K USD"}
                           icon={
                             <SavingsIcon
-                              style={{ fontSize: 30, color: "white" }}
+                              style={{ fontSize: 40, color: "white" }}
                             />
                           }
                         />
@@ -135,7 +136,7 @@ export default function About() {
                       style={{
                         color: "#FFFFFE",
                         textAlign: "justify",
-                        fontSize: "1.20rem",
+                        fontSize: "1.35rem",
                       }}
                     >
                       Hi there! I'm Hilbert Lazatin. I've been working data-driven projects across a range of industries,

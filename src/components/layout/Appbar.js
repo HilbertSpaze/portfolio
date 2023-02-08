@@ -25,25 +25,8 @@ import NavContext from "../../context/NavContext";
 const pages = ["Home", "Projects", "About", "Contact"];
 
 export default function ResponsiveAppBar(props) {
-  // const {
-  //   navColor,
-  //   setNavColor,
-  //   fontColor,
-  //   setFontColor,
-  //   logoColor,
-  //   setLogoColor,
-  //   // location,
-  //   colorConfig,
-  // } = useContext(NavContext);
-
-  // useEffect(() => {
-  //   setNavColor(colorConfig[location].nav);
-  //   setFontColor(colorConfig[location].font);
-  //   setLogoColor(colorConfig[location].logo);
-  // }, [location, colorConfig, setNavColor, setFontColor, setLogoColor]);
-
-  // const navigate = useNavigate();
   const { window } = props;
+  const color = "#678dab"
   const container =
     window !== undefined ? () => window().document.body : undefined;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -99,7 +82,6 @@ export default function ResponsiveAppBar(props) {
               <ListItemButton
                 sx={{ textAlign: "center" }}
                 onClick={() => {
-                  // navigate(`/${item}`);
                 }}
               >
                 <ListItemText
@@ -118,7 +100,7 @@ export default function ResponsiveAppBar(props) {
     <AppBar
       position="fixed"
       style={{
-        background: `linear-gradient(to left, #f0f2f0,#edebff,#f0f2f0)`,
+        background: `transparent`,
         boxShadow: "none",
         // backdropFilter: "blur(20px)",
       }}
@@ -173,7 +155,7 @@ export default function ResponsiveAppBar(props) {
                   sx={{
                     my: 2,
                     display: "block",
-                    color: `black`,
+                    color: `${color}`,
                     fontWeight: "bold",
                   }}
                 >
@@ -188,7 +170,7 @@ export default function ResponsiveAppBar(props) {
                   sx={{
                     my: 2,
                     display: "block",
-                    color: `black`,
+                    color: `${color}`,
                     fontWeight: "bold",
                   }}
                 >
@@ -198,20 +180,20 @@ export default function ResponsiveAppBar(props) {
             })}
           </Box>
 
-          {/* <IconButton
+          <IconButton
             href="https://www.linkedin.com/in/hlazatin"
             target="_blank"
-            style={{ color: `black` }}
+            style={{ color: `${color}` }}
           >
             <LinkedInIcon style={{ fontSize: 35 }} />
           </IconButton>
           <IconButton
             href="https://github.com/hlazatin"
             target="_blank"
-            style={{ color: `black` }}
+            style={{ color: `${color}` }}
           >
             <GitHubIcon style={{ fontSize: 35 }} />
-          </IconButton> */}
+          </IconButton>
 
           {/* <Typography
             variant="h6"
