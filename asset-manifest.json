@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.a7840854.css",
-    "main.js": "/portfolio/static/js/main.cd469782.js",
+    "main.js": "/portfolio/static/js/main.979241d9.js",
     "static/media/facemask.gif": "/portfolio/static/media/facemask.6a34051045c2d7fa8991.gif",
     "static/media/sketch_final.gif": "/portfolio/static/media/sketch_final.7d00efad0a351c8e49e3.gif",
     "static/media/stocks.gif": "/portfolio/static/media/stocks.e39f82a104d977505fe4.gif",
+    "static/media/nba.webp": "/portfolio/static/media/nba.be0f5438b96f3fb81a1a.webp",
     "static/media/network.png": "/portfolio/static/media/network.cc4444885e0edd466f89.png",
     "static/media/paris_crop.jpg": "/portfolio/static/media/paris_crop.9595abe17952a4cd1a73.jpg",
     "static/media/deepweb.gif": "/portfolio/static/media/deepweb.7ff6aa5a84d0bcb4719b.gif",
@@ -12,10 +13,10 @@
     "static/media/vib.gif": "/portfolio/static/media/vib.0897fe56d47acdd62dff.gif",
     "index.html": "/portfolio/index.html",
     "main.a7840854.css.map": "/portfolio/static/css/main.a7840854.css.map",
-    "main.cd469782.js.map": "/portfolio/static/js/main.cd469782.js.map"
+    "main.979241d9.js.map": "/portfolio/static/js/main.979241d9.js.map"
   },
   "entrypoints": [
     "static/css/main.a7840854.css",
-    "static/js/main.cd469782.js"
+    "static/js/main.979241d9.js"
   ]
 }
